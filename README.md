@@ -7,10 +7,10 @@
 ## Install
 
 ```bash
-npx skills add raxyproxy/skills/proxy-manager
+npx skills add raxyproxy/skills
 ```
 
-That's it. The skill is now available in your AI agent.
+That's it. The skill `raxyproxy` is now available in your AI agent. Invoke it with `/raxyproxy`.
 
 ---
 
@@ -80,9 +80,9 @@ correct campaign IDs.
 
 ## Available skills
 
-| Skill | Install command | Description |
-|-------|----------------|-------------|
-| `proxy-manager` | `npx skills add raxyproxy/skills/proxy-manager` | Generate proxies, list packages, check balance |
+| Skill | Invocation | Description |
+|-------|-----------|-------------|
+| `raxyproxy` | `/raxyproxy` | Generate proxies, list packages, check balance |
 
 ---
 

@@ -24,5 +24,5 @@ print(f"{'ID':<6} {'Type':<22} {'Status':<10} {'Available':<12} {'Name'}")
 print("-" * 70)
 for p in pkgs:
     avail = f"{float(p.get('available_gb', 0)):.2f} GB"
-    print(f"{p['id']:<6} {p['product']['type']:<22} {p['status']:<10} {avail:<12} {p['product']['name']}")
+    print(f"{p['id']:<6} {p['type']:<22} {p['status']:<10} {avail:<12} {p['name']}")
 EOF
