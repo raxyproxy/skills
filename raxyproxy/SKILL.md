@@ -163,7 +163,7 @@ curl -x "http://LOGIN__sessid.worker-1;sessttl.10:PASS@proxy.raxyproxy.com:823" 
 | `residential` | from $1.69/GB | Sites with bot detection |
 | `mobile` | from $3.37/GB | Mobile-gated content, carrier-specific |
 | `datacenter` | from $0.69/GB | Public APIs, high-volume pipelines |
-| `residential_premium` | from $6.90/GB | Maximum reliability, no geo surcharge |
+| `residential_premium` | from $8.45/GB | Maximum reliability, no geo surcharge |
 
 ## Ports
 
