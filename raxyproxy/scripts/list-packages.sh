@@ -10,19 +10,18 @@ fi
 
 curl -sf "https://raxyproxy.com/api/v1/packages" \
   -H "Authorization: Bearer ${RAXYPROXY_API_KEY}" | \
-python3 - <<'EOF'
+python3 -c "
 import json, sys
 
-raw = sys.stdin.read()
-pkgs = json.loads(raw).get("data", [])
+pkgs = json.loads(sys.stdin.read()).get('data', [])
 
 if not pkgs:
-    print("No packages found.")
+    print('No packages found.')
     sys.exit(0)
 
-print(f"{'ID':<6} {'Type':<22} {'Status':<10} {'Available':<12} {'Name'}")
-print("-" * 70)
+print(f\"{'ID':<6} {'Type':<22} {'Status':<10} {'Available':<12} {'Name'}\")
+print('-' * 70)
 for p in pkgs:
-    avail = f"{float(p.get('available_gb', 0)):.2f} GB"
-    print(f"{p['id']:<6} {p['type']:<22} {p['status']:<10} {avail:<12} {p['name']}")
-EOF
+    avail = f\"{float(p.get('available_gb', 0)):.2f} GB\"
+    print(f\"{p['id']:<6} {p['type']:<22} {p['status']:<10} {avail:<12} {p['name']}\")
+"
